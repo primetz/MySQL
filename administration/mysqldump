@@ -1,0 +1,11 @@
+// Выполнить дамп БД example в файл sample.sql
+mysqldump example > sample.sql
+
+// Выполнить дамп первых 100 строк таблицы в БД
+mysqldump db_name --where='1 limit 100' table_name > sample.sql
+
+// Развернуть дамп БД из файла sample.sql
+DROP DATABASE IF EXIST sample;
+CREATE DATABASE sample;
+USE sample;
+SOURCE sample.sql;
