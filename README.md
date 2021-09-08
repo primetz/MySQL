@@ -1,4 +1,4 @@
-[![MySQL](media/logo_mysql.png)](https://dev.mysql.com/doc/refman/8.0/en/)
+[![MySQL](media/logo_mysql.png)](https://dev.mysql.com/doc/refman/8.0/en?target=_blank)
 
 - [Нормализация БД](#database_normalization)
     - [Первая нормальная форма (1НФ)](#1_nf)
