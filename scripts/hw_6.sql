@@ -37,7 +37,7 @@ SELECT
     CASE (SELECT gender FROM profiles WHERE user_id = likes.user_id)
         WHEN 'm' THEN 'male'
         WHEN 'f' THEN 'female'
-        END AS gender,
+    END AS gender,
     COUNT(*) AS put_likes
 FROM likes
 GROUP BY gender;
