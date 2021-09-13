@@ -9,13 +9,6 @@ CREATE TABLE catalogs (
     UNIQUE unique_name(name(10))
 ) COMMENT = 'Разделы интернет-магазина';
 
-INSERT INTO catalogs
-    VALUES (NULL, 'Процессоры'),
-           (NULL, 'Материнские платы'),
-           (NULL, 'Видеокарты'),
-           (NULL, 'Жесткие диски'),
-           (NULL, 'Оперативная память');
-
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
@@ -24,14 +17,6 @@ CREATE TABLE users (
     created_at VARCHAR(50),
     updated_at VARCHAR(50)
 ) COMMENT = 'Покупатели';
-
-INSERT INTO users (name, birthday_at, created_at, updated_at)
-    VALUES ('Геннадий', '1990-10-05', '20.10.2016 8:10', '20.10.2017 18:10'),
-           ('Наталья', '1984-11-12', '20.10.2015 8:10', '20.10.2016 18:10'),
-           ('Александр', '1985-05-20', '20.10.2014 8:10', '20.10.2016 18:10'),
-           ('Сергей', '1988-02-14', '20.10.2013 8:10', '20.10.2014 18:10'),
-           ('Иван', '1998-01-12', '20.10.2012 8:10', '20.10.2013 18:10'),
-           ('Мария', '1992-08-29', '20.10.2011 8:10', '20.10.2012 18:10');
 
 DROP TABLE IF EXISTS products;
 CREATE TABLE products (
@@ -44,15 +29,6 @@ CREATE TABLE products (
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     KEY index_of_catalog_id (catalog_id)
 ) COMMENT = 'Товарные позиции';
-
-INSERT INTO products (name, description, price, catalog_id)
-    VALUES ('Intel Core i3-8100', 'Процессор для настольных персональных компьютеров, основанных на платформе Intel.', 7890.00, 1),
-           ('Intel Core i5-7400', 'Процессор для настольных персональных компьютеров, основанных на платформе Intel.', 12700.00, 1),
-           ('AMD FX-8320E', 'Процессор для настольных персональных компьютеров, основанных на платформе AMD.', 4780.00, 1),
-           ('AMD FX-8320', 'Процессор для настольных персональных компьютеров, основанных на платформе AMD.', 7120.00, 1),
-           ('ASUS ROG MAXIMUS X HERO', 'Материнская плата ASUS ROG MAXIMUS X HERO, Z370, Socket 1151-V2, DDR4, ATX', 19310.00, 2),
-           ('Gigabyte H310M S2H', 'Материнская плата Gigabyte H310M S2H, H310, Socket 1151-V2, DDR4, mATX', 4790.00, 2),
-           ('MSI B250M GAMING PRO', 'Материнская плата MSI B250M GAMING PRO, B250, Socket 1151, DDR4, mATX', 5060.00, 2);
 
 DROP TABLE IF EXISTS orders;
 CREATE TABLE orders (
