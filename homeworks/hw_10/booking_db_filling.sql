@@ -1,151 +1,118 @@
-INSERT INTO countries
-VALUES (1,'Isle of Man','1974-10-29 21:42:40','2012-08-02 21:18:35'),
-       (2,'Nigeria','2018-11-06 04:51:47','1996-10-27 15:19:17'),
-       (3,'Lao People\'s Democratic Republic','1990-12-08 18:25:02','2008-09-07 14:10:17'),
-       (4,'Niue','1991-09-10 21:27:05','2001-04-27 00:10:13'),
-       (5,'Grenada','1987-02-02 15:19:41','2016-05-14 15:26:38'),
-       (6,'Puerto Rico','2000-03-17 14:55:19','1977-01-29 16:08:28'),
-       (7,'Malta','1972-01-16 10:03:46','1972-01-30 02:43:25'),
-       (8,'Bosnia and Herzegovina','2010-02-07 03:44:33','1980-02-23 15:08:23'),
-       (9,'Estonia','1983-10-17 08:52:41','1986-05-09 10:00:23'),
-       (10,'Palestinian Territory','2016-11-24 20:16:41','2004-09-27 09:37:16');
+INSERT INTO `users`
+VALUES (1,'Dustin','Murray','cheyenne.morissette@example.net',75197817566,'30c5cab66107b227c2122483af0f6b40224f2805','2011-06-19 13:12:00','1978-04-16 03:01:33'),
+       (2,'Shanna','Armstrong','marcus92@example.org',72568077160,'cb7bd770bafe38aa2c6a80b9e2cc3f75e7eb955b','1990-02-01 10:58:00','1970-07-19 13:50:49'),
+       (3,'Leanna','Buckridge','claire11@example.net',75569493914,'4f1df8325215318d603e03b13401b97261a0218a','2012-04-27 03:13:06','1994-05-05 16:56:37'),
+       (4,'Delilah','Haley','wbecker@example.com',71585079259,'bbf62fd1022932428d86575721a18549ab5f6488','1977-02-03 02:01:19','1998-10-21 15:04:48'),
+       (5,'Joany','Wisozk','robel.demond@example.net',70872913501,'50c87c69ba155ed41f65d179594b448ba7de5124','1985-11-26 07:51:34','2017-03-22 10:10:49'),
+       (6,'Fay','Kovacek','baumbach.kim@example.com',72207013829,'e0270dcef2b680c7b24bcf7b9c109a1fabe1bdf1','1985-05-30 05:24:18','1971-09-24 03:10:34'),
+       (7,'Keven','Kirlin','abigale.harris@example.net',77951065851,'957c3b76b38e61bba58d64d692169e36e6c4f585','2009-09-05 04:31:47','1980-08-17 20:56:48'),
+       (8,'Verna','Kshlerin','vgoldner@example.org',72629408598,'a2218010723e2542224437fb3dc2a2b7b3a23f68','1993-12-16 01:09:03','2014-03-05 03:09:16'),
+       (9,'Zachariah','Hane','darien.farrell@example.net',74133686069,'f78f3c7acfa10900c77890212d42397738d768e3','2009-04-20 10:45:09','1981-04-11 16:04:57'),
+       (10,'Verla','Steuber','qleuschke@example.org',75507445819,'aa9037af848b57c366408cbbe1bfb961d8ee538d','2004-09-28 20:08:50','1974-12-23 12:55:42');
 
-INSERT INTO cities
-VALUES (1,'Hanechester',1,'1972-02-07 10:57:15','2000-09-27 08:06:59'),
-       (2,'Casandramouth',2,'1998-06-25 07:56:57','1983-12-18 04:12:30'),
-       (3,'Lake Cordia',3,'1974-05-23 03:02:05','1987-01-13 20:38:34'),
-       (4,'Franeckifort',4,'1997-10-20 11:45:33','1981-04-14 04:03:41'),
-       (5,'Sauerbury',5,'2018-02-18 22:44:58','1978-07-27 21:48:19'),
-       (6,'Marcosmouth',6,'1995-05-07 06:23:12','1997-08-21 19:12:00'),
-       (7,'Wittingshire',7,'1976-08-05 09:12:22','2000-07-08 16:15:00'),
-       (8,'Klingchester',8,'1993-03-30 19:16:46','2008-02-23 23:46:50'),
-       (9,'Lake Noemi',9,'2010-02-27 20:05:45','1976-12-16 17:44:40'),
-       (10,'Hellerside',10,'2020-02-08 14:01:57','1990-02-14 20:15:53');
+INSERT INTO `placement`
+VALUES (1,'est','Omnis quidem consequuntur esse aut commodi. Eveniet accusamus doloribus voluptas. Doloremque reiciendis eum eius.','1998-02-06 07:20:42','1993-11-20 00:37:46'),
+       (2,'quae','Voluptas eveniet rerum ut commodi alias voluptas. Omnis corporis laudantium debitis soluta dolores explicabo. Iusto eos et voluptates quod dolorem commodi qui qui.','2017-08-22 03:49:13','2014-09-13 11:27:33'),
+       (3,'ea','Modi consequatur id ea. Aut sequi est qui sequi praesentium ea. Ea et earum omnis dolorem suscipit numquam. Ipsam voluptatem aut doloremque et fuga. Necessitatibus error a delectus sed ea cum quos.','2013-01-08 12:01:06','2012-11-25 15:22:57'),
+       (4,'odio','Amet et similique impedit eaque neque nostrum. Nemo veniam nemo voluptatem fuga dolores. Voluptatem sunt repellat vero distinctio sapiente eum occaecati.','2008-03-04 10:33:10','1991-05-03 04:33:37'),
+       (5,'quibusdam','Veniam nobis nesciunt illo temporibus ducimus eum. Distinctio nihil exercitationem distinctio quidem. Ducimus voluptas necessitatibus et et aut sequi et.','1988-10-18 10:04:47','1999-08-29 12:57:16'),
+       (6,'laboriosam','Rerum sequi labore sed atque temporibus. Eos aliquam blanditiis omnis tenetur eaque qui. Quam quis nemo laboriosam velit aut quisquam reprehenderit. Rerum quia cum maiores ex voluptatem.','1997-12-13 11:49:21','2011-01-09 09:15:00'),
+       (7,'dolor','Magnam qui error doloremque voluptatibus eum. Ut velit quis qui et harum. Sit molestiae accusantium similique quam dolorum enim fugiat velit.','1978-03-12 01:38:05','1995-12-05 10:38:47'),
+       (8,'impedit','Et non reprehenderit velit quod amet quod. Similique odit corrupti et iusto ut id. Eius et iure quibusdam earum aperiam.','1998-05-18 06:52:03','1973-09-02 12:04:55'),
+       (9,'aut','Voluptatibus ipsam in beatae maiores et qui. Temporibus ut voluptatum a blanditiis aut minima et repellat. Non impedit quia repudiandae at.','1979-08-17 03:42:03','1975-06-07 12:31:16'),
+       (10,'dolores','Quae dolores quia labore et nihil rerum. Accusamus ea impedit sunt laboriosam. Perspiciatis voluptas nobis vel rerum eius.','1998-02-04 04:11:28','1989-05-06 06:25:20');
 
-INSERT INTO addresses
-VALUES (1,1,'837 Nathaniel Village Suite 166 Hoytchester, ND 37605-5651',70925157857,'1980-08-13 21:10:49','1998-07-15 21:50:52'),
-       (2,2,'35025 Johnnie Stravenue Lake Stephaniehaven, RI 32264',78480433034,'1974-10-11 01:26:42','1995-01-26 01:35:32'),
-       (3,3,'549 Bauch Drive Apt. 953 West Garettfurt, HI 41545',76437567709,'1970-03-13 09:44:32','2004-08-23 22:06:04'),
-       (4,4,'8119 Blanca Grove Apt. 754 Margaritafurt, WV 45475-1940',74953078152,'2000-07-15 04:34:59','1998-12-23 23:27:49'),
-       (5,5,'56420 Sauer Ridge Port Jovanifurt, SC 44575-9817',79136896519,'2010-03-04 01:01:52','1983-12-23 05:33:46'),
-       (6,6,'486 Pouros Falls Apt. 363 Gayville, RI 57388',70968447648,'1971-03-08 16:56:57','2002-04-14 10:31:06'),
-       (7,7,'099 Lubowitz Street Port Webster, MO 37150',73210097178,'2011-01-14 20:03:39','1995-09-27 21:08:37'),
-       (8,8,'571 Wilhelm Gardens Apt. 317 Port Fidelshire, SC 79552',78294217768,'2006-07-31 14:26:44','1991-08-09 16:37:41'),
-       (9,9,'457 Wehner Pine Stromanmouth, MA 83990-9854',72059306874,'2015-02-20 18:48:42','2020-04-01 02:09:37'),
-       (10,10,'22484 Bergnaum Square North Alexandrineborough, NC 07356-0348',79870611666,'2018-01-31 03:12:45','1974-06-18 19:07:50');
+INSERT INTO `rooms`
+VALUES (1,'villas',1,6,'Rerum vel quae sunt alias impedit et.',234.00),
+       (2,'resorts',2,5,'Ea velit perspiciatis est odit quidem et illo.',146.65),
+       (3,'chalet',3,4,'Veritatis omnis facilis nulla consequatur quis.',0.00),
+       (4,'apartments',4,6,'Fugiat et quia facere ut consequatur quia magnam.',999.99),
+       (5,'hotel',5,2,'Eligendi facere laboriosam rerum ut inventore hic reiciendis.',2.04),
+       (6,'chalet',6,3,'Accusamus consequatur fugiat enim necessitatibus consequatur temporibus non.',654.00),
+       (7,'apartments',7,3,'Repudiandae omnis non accusamus eum nemo dignissimos eligendi.',873.99),
+       (8,'apartments',8,2,'Occaecati deserunt animi accusantium reiciendis ab velit voluptatem.',170.28),
+       (9,'apartments',9,2,'Fuga autem quia voluptatem nesciunt id recusandae harum suscipit.',456.99),
+       (10,'resorts',10,5,'Omnis sed et est atque quas iure.',446.00);
 
-INSERT INTO placement
-VALUES (1,1,'chalet','quis','Aut laboriosam eum nulla voluptas veritatis asperiores aspernatur. Qui vitae quia inventore et nemo sapiente. Qui vero molestiae dolore labore et modi.','1985-01-22 21:40:32','2004-11-20 17:42:49'),
-       (2,2,'hotel','id','Molestias tenetur porro et et reiciendis laudantium. Velit blanditiis dolorem qui doloremque quia vitae et. Et iure ut voluptatem qui. Ipsa ipsum quasi voluptates voluptas neque laudantium.','1985-10-04 14:42:59','2005-02-14 13:58:32'),
-       (3,3,'hotel','vitae','Harum fuga fuga voluptas est ut id tempore. Culpa illo quae voluptatem odit est quia cum. Qui autem provident voluptas quia. Amet perferendis placeat modi corporis.','2003-06-21 08:34:39','1974-07-10 19:36:21'),
-       (4,4,'resorts','optio','Aspernatur quae ea rerum maxime voluptatum. Numquam mollitia sequi non vel. Delectus odit non ut corporis. Odio rerum enim nihil distinctio est minima nostrum.','1977-01-21 22:14:57','2013-12-03 22:53:57'),
-       (5,5,'resorts','quia','Et at et quibusdam beatae voluptatem amet. Sapiente voluptatibus sint ipsum. Quia voluptatem ea distinctio dolores atque. Impedit aliquam vel saepe illum molestiae cupiditate porro. Fuga totam eum sunt placeat suscipit culpa beatae perspiciatis.','1980-11-13 00:30:29','2009-02-06 01:42:53'),
-       (6,6,'apartments','et','Saepe ut similique fuga blanditiis blanditiis aut. Et saepe quia repudiandae quisquam omnis sunt iste. Incidunt aspernatur ut et fugit vel optio fugiat. Alias sunt eveniet itaque.','1986-01-03 13:58:56','1973-05-16 01:44:48'),
-       (7,7,'hotel','impedit','Repudiandae dicta recusandae ut qui ipsa quia. Ea omnis et molestiae saepe expedita aut qui. Cum voluptatum voluptas maxime repudiandae. Doloremque ea totam est quasi corporis non.','2012-06-23 02:26:38','1977-02-21 21:34:25'),
-       (8,8,'resorts','est','Consectetur magnam ab sunt. Voluptas deserunt ut corporis in fugiat amet in blanditiis. Rem eos harum quia quia. Fuga qui tempore beatae at.','1975-09-01 05:19:26','2008-05-25 21:00:08'),
-       (9,9,'hotel','blanditiis','Nesciunt veritatis impedit molestiae possimus. Et et beatae ut veniam aut. Sit iure officia saepe minus nam sit. Voluptatem et aliquam quaerat itaque.','1985-03-07 19:44:12','1980-10-23 20:09:07'),
-       (10,10,'resorts','est','Enim nulla aliquam alias qui recusandae quia. Nulla corrupti quo qui quis qui libero. Repellat eos velit dolor quas repudiandae mollitia perferendis necessitatibus. Officiis est odio repudiandae et.','1983-11-06 17:57:02','2021-07-21 22:51:58');
+INSERT INTO `countries`
+VALUES (1,'Bahrain','1979-03-21 01:09:45','1988-10-18 07:53:52'),
+       (2,'Colombia','1991-01-30 20:40:30','2008-02-18 05:22:12'),
+       (3,'South Georgia and the South Sandwich Islands','2019-05-17 04:53:17','2005-05-18 00:47:35'),
+       (4,'Namibia','1993-11-27 19:57:42','1985-09-30 01:02:18'),
+       (5,'Korea','1993-04-04 15:59:43','2011-06-06 17:49:03'),
+       (6,'Chile','1972-09-22 16:53:15','1994-09-17 20:02:56'),
+       (7,'San Marino','1982-11-12 10:08:02','1986-01-20 14:02:28'),
+       (8,'Falkland Islands (Malvinas)','2002-10-14 04:20:22','1978-04-23 13:26:49'),
+       (9,'Cambodia','1985-08-25 23:10:57','2001-05-07 02:53:15'),
+       (10,'Greenland','2000-03-04 09:00:29','2007-07-27 07:29:22');
 
-INSERT INTO rooms
-VALUES (1,1,8,'Voluptas adipisci iste saepe molestias ratione blanditiis nostrum.',1136.38),
-       (2,2,5,'Voluptatum enim vel sunt quam at.',232.00),
-       (3,3,2,'Occaecati voluptatem rerum dignissimos qui est voluptas.',131.00),
-       (4,4,4,'Sed possimus nisi sint voluptas ut et.',3069.21),
-       (5,5,6,'Id ea ut cumque recusandae quasi voluptatem.',5.26),
-       (6,6,6,'Dolores quae dolor velit velit veniam.',17192.28),
-       (7,7,7,'Sequi qui omnis perspiciatis.',325548.64),
-       (8,8,8,'Occaecati error tempora voluptas quia asperiores veritatis hic.',5035.43),
-       (9,9,8,'Eius blanditiis velit porro dolorum voluptatem voluptatem ut possimus.',6405.18),
-       (10,10,3,'Est occaecati aut consequuntur velit.',9961.33);
+INSERT INTO `cities`
+VALUES (1,1,'South Isabella','1993-03-04 08:17:19','1997-04-22 10:04:43'),
+       (2,2,'North Pearlfort','1977-12-25 00:45:26','2005-10-14 06:26:08'),
+       (3,3,'South Jaceborough','2017-11-26 06:04:53','1973-03-25 11:17:52'),
+       (4,4,'Port Alan','1979-10-06 12:52:27','2014-12-26 20:40:12'),
+       (5,5,'South Stuart','2021-06-29 15:02:50','1976-02-13 09:33:59'),
+       (6,6,'Deshaunside','2015-10-18 18:55:46','1989-02-12 23:46:19'),
+       (7,7,'South Oceaneton','1977-10-15 21:34:45','1987-03-31 19:48:01'),
+       (8,8,'Monaton','1990-09-27 03:22:18','1976-05-22 03:40:12'),
+       (9,9,'Naderland','1993-02-06 12:23:00','1986-10-01 19:06:42'),
+       (10,10,'Antoniafurt','1973-12-07 07:54:00','2009-10-23 18:18:43');
 
-INSERT INTO photo_albums
-VALUES (1,1,'2009-01-16 03:19:32','1997-09-04 06:14:47'),
-       (2,2,'2011-07-18 18:40:06','1996-11-18 22:52:15'),
-       (3,3,'2002-11-20 18:35:22','1989-03-19 04:56:42'),
-       (4,4,'1972-02-03 05:30:21','1983-08-20 08:21:26'),
-       (5,5,'1986-07-05 01:09:25','2006-01-16 21:23:00'),
-       (6,6,'1999-11-12 13:01:25','1988-09-01 23:27:47'),
-       (7,7,'2011-06-10 13:31:46','1990-01-29 14:46:30'),
-       (8,8,'1996-09-21 20:01:59','2016-10-11 11:06:25'),
-       (9,9,'1997-11-19 22:39:19','1980-08-28 09:35:38'),
-       (10,10,'2013-04-08 15:38:31','1975-12-29 05:58:56');
+INSERT INTO `addresses`
+VALUES (1,1,1,1,'0877 Kilback Circle Emmettmouth, IN 54279',71285980110,'1987-09-20 22:01:10','2016-05-02 13:13:37'),
+       (2,2,2,2,'027 Oswaldo Extensions Apt. 749 West Candida, AL 36220-7827',71610998040,'1977-12-09 18:21:10','1970-03-04 01:36:46'),
+       (3,3,3,3,'87317 Reinger Skyway South Americo, CT 34855',78916053301,'1970-10-24 10:09:57','2021-08-09 06:09:18'),
+       (4,4,4,4,'7900 Wehner Freeway Lake Gaetanotown, NH 90133',72106659947,'1989-12-17 14:36:00','1976-12-06 11:04:26'),
+       (5,5,5,5,'6830 Stroman Valley West Sheilatown, OK 28204-0735',73933811378,'1983-12-09 12:29:29','1971-06-29 17:05:00'),(6,6,6,6,'5258 Bailey Valleys Port Bennyhaven, TN 86974-1663',72304425225,'2016-05-22 00:51:09','1978-04-02 17:14:17'),
+       (7,7,7,7,'528 Keaton Gateway South Arvilla, CA 21181-1900',72886124253,'1993-06-21 09:09:19','2020-12-19 16:25:46'),
+       (8,8,8,8,'7673 Pearl View Apt. 887 Homenickland, SC 47755-5923',78861222774,'2018-05-15 22:53:42','2008-04-01 05:47:53'),
+       (9,9,9,9,'2997 Lonzo Drive Suite 221 South Tanya, ID 11095-4060',79016424948,'2018-02-05 01:06:37','1970-04-10 15:33:26'),
+       (10,10,10,10,'72065 Vinnie Land Apt. 738 Port Jessica, AK 90244-3212',78946949359,'1998-05-20 17:20:28','1986-10-08 10:50:53');
 
-INSERT INTO photos
-VALUES (1,1,1,'tmp/99ebcafaa7a4b66fb7b30c5628689f05.jpg',NULL,'2009-10-29 07:54:41','2002-08-17 01:02:15'),
-       (2,2,2,'tmp/fa250ab82095e18675a482e822144615.jpg',NULL,'2015-07-07 19:15:45','2017-11-06 11:34:53'),
-       (3,3,3,'tmp/aa6a6c56c0cdc143bea671d1e4783104.jpg',NULL,'2004-12-17 01:58:11','2012-08-03 02:57:16'),
-       (4,4,4,'tmp/8e3a7ae93e07e7674155f72c9de51db2.jpg',NULL,'2021-02-04 02:31:41','2002-04-24 18:32:59'),
-       (5,5,5,'tmp/46bff3a43d5b86f8ac76750a2afaee0d.jpg',NULL,'1974-01-05 20:23:41','1975-08-16 14:58:16'),
-       (6,6,6,'tmp/aca8974c5444c6249aa3bd33d67c08bf.jpg',NULL,'1984-01-09 03:58:09','1990-03-20 10:14:52'),
-       (7,7,7,'tmp/674cf7253330e207df24e90a6638f1d8.jpg',NULL,'2009-09-08 23:53:34','1980-09-12 03:47:44'),
-       (8,8,8,'tmp/630411a2cf3133cb21abc238838eb774.jpg',NULL,'2019-04-25 10:09:19','1973-12-30 18:16:34'),
-       (9,9,9,'tmp/9d1dff590c2574960f3a3a7f8a04a6c3.jpg',NULL,'1996-05-01 00:46:17','1973-07-22 07:51:58'),
-       (10,10,10,'tmp/b778a214e5538923122870539b1f65af.jpg',NULL,'2014-06-14 15:02:09','1985-02-18 18:30:14');
+INSERT INTO `photo_albums`
+VALUES (1,1,'2010-03-03 02:53:00','1991-12-15 20:43:09'),
+       (2,2,'2009-12-13 12:29:37','2009-03-26 03:46:10'),
+       (3,3,'2012-11-30 06:48:15','1977-03-09 15:39:33'),
+       (4,4,'1977-05-06 06:54:26','1981-11-16 18:31:25'),
+       (5,5,'2004-10-01 04:27:09','1975-08-26 06:22:21'),
+       (6,6,'1981-02-16 00:06:30','1976-03-18 14:08:29'),
+       (7,7,'1983-09-06 01:00:54','2004-11-22 08:14:51'),
+       (8,8,'1976-05-12 12:23:04','2012-11-23 14:36:42'),
+       (9,9,'2019-04-09 08:28:48','1972-06-22 05:27:18'),
+       (10,10,'1977-12-07 01:30:14','2000-02-12 19:28:59');
 
-INSERT INTO users
-VALUES (1,'Reva','Hahn','ila.beahan@example.net',72243468756,'9d071b4fb95a04ad72026960f5c8ed16d843ebe3','1989-09-27 20:45:29','2014-07-11 12:06:42'),
-       (2,'Jameson','Boyer','fnienow@example.org',74166229637,'75e16f93d53222b7330a08c6a86fb2f51476f0ec','1996-01-16 22:22:41','1977-11-26 23:29:50'),
-       (3,'Demario','McCullough','wisoky.ferne@example.net',74013375444,'ccb65982164fbb8519c75aeda47107de09e16c7e','2011-09-26 00:16:30','1993-09-16 02:05:45'),
-       (4,'Thomas','Hayes','lelah05@example.net',75422053802,'3d8d4501ac94b17ae4889f9f9c1881ff668d85ca','2010-04-21 04:49:16','1981-04-21 23:44:40'),
-       (5,'Eileen','Pouros','lizeth84@example.com',74762520100,'12fec7953ffda2533cc73a2651178f4382436b7b','1975-07-08 06:52:08','2011-01-20 08:18:37'),
-       (6,'Darby','Bogan','yasmeen64@example.com',74656067397,'5fb85716f757961c566ff0767e1720b029e0d9f3','1981-02-21 04:47:19','1999-04-17 06:29:58'),
-       (7,'Aiden','Kerluke','vincenza29@example.com',75101575781,'aef790237d42de84904a96017a48e59b72fe9bf2','2018-10-04 22:02:09','1972-09-12 09:18:23'),
-       (8,'Shad','Padberg','jacobson.eve@example.org',76537239700,'a61a518c54d6a90120cefac39d1fc1a261119634','1984-10-11 03:51:22','1978-02-01 08:14:26'),
-       (9,'Kaylee','Windler','jackeline00@example.net',73396374490,'8188f9a29a68385c62a04370843126ae84050c36','1980-10-24 18:36:18','2011-12-24 20:24:03'),
-       (10,'Maurice','Lubowitz','krunolfsdottir@example.net',78590739173,'d81648527df0e0587f6600392f52d010aabea898','2012-11-06 07:26:47','1979-12-20 08:47:20');
+INSERT INTO `photos`
+VALUES (1,1,1,'mxl',NULL,'1993-09-22 22:38:18','2000-06-09 15:58:49'),
+       (2,2,2,'tao',NULL,'1975-12-10 00:16:45','2018-07-16 23:07:08'),
+       (3,3,3,'z1',NULL,'1974-05-27 06:36:35','2009-10-09 07:16:59'),
+       (4,4,4,'rar',NULL,'1995-07-30 11:05:15','1994-12-09 05:38:10'),
+       (5,5,5,'jnlp',NULL,'1977-06-14 02:15:04','1983-09-28 13:26:18'),
+       (6,6,6,'mods',NULL,'1977-11-23 18:55:00','1997-11-19 05:53:05'),
+       (7,7,7,'gramps',NULL,'1988-06-25 23:13:09','1984-12-20 15:33:42'),
+       (8,8,8,'pls',NULL,'2003-07-19 00:02:20','1990-10-28 03:55:32'),
+       (9,9,9,'std',NULL,'1988-08-23 17:57:58','1970-12-14 02:41:06'),
+       (10,10,10,'h264',NULL,'1975-04-04 02:39:26','1999-11-19 16:07:28');
 
-INSERT INTO booked
-VALUES (1,1,'1998-06-15 17:02:58','2010-07-02 03:00:31','1970-09-20 09:02:49','2019-01-08 23:53:03'),
-       (2,2,'2006-11-18 18:32:40','1976-10-05 05:08:36','2014-11-21 23:05:58','1974-08-10 22:03:45'),
-       (3,3,'1986-01-12 13:08:22','2018-04-16 15:47:23','2021-08-19 14:05:05','2014-10-07 08:41:38'),
-       (4,4,'1999-12-19 11:47:24','2015-04-16 12:19:32','2020-08-07 19:00:25','1997-10-17 03:15:46'),
-       (5,5,'2002-04-03 10:18:34','1998-03-04 21:30:54','2004-04-01 08:48:49','1977-11-15 13:21:53'),
-       (6,6,'2018-06-28 13:22:20','2006-09-30 06:16:13','1988-08-31 02:04:58','2002-03-21 07:57:48'),
-       (7,7,'2018-12-12 09:29:37','1970-01-02 12:22:03','1971-11-15 00:28:31','2012-08-12 17:51:01'),
-       (8,8,'2021-01-12 02:00:31','2019-11-15 16:16:52','1989-09-07 19:55:21','2013-02-25 23:26:37'),
-       (9,9,'2008-12-29 02:47:50','1970-05-05 13:22:01','2014-09-24 06:07:05','1981-10-13 04:10:07'),
-       (10,10,'1985-10-08 08:05:35','2012-12-05 02:15:23','2003-08-13 17:17:37','1975-07-24 13:41:26'),
-       (1,1,'1975-08-05 22:48:45','2000-02-17 06:19:57','2008-08-05 02:33:16','1994-10-30 07:13:48'),
-       (2,2,'2012-05-17 23:12:53','2010-05-08 23:19:51','2007-07-05 01:13:28','1990-12-20 09:29:03'),
-       (3,3,'2007-05-02 18:55:30','1994-04-30 11:28:44','1984-12-26 23:19:17','1970-02-02 20:46:35'),
-       (4,4,'1978-11-28 01:54:05','2017-04-30 12:55:40','2003-07-27 21:07:43','1986-07-26 18:23:50'),
-       (5,5,'1983-12-18 07:16:57','1980-09-10 03:09:18','1972-05-17 11:08:46','1980-11-01 21:09:50');
+INSERT INTO `booked`
+VALUES (1,1,'1977-11-03','1986-12-15','1994-11-06 21:46:46','1995-03-03 14:03:25'),
+       (2,2,'2010-08-10','2012-07-06','1977-01-24 21:47:34','1987-09-10 00:28:27'),
+       (3,3,'2020-01-28','2014-08-29','1986-07-30 11:41:43','2018-12-11 21:59:25'),
+       (4,4,'2019-06-29','2018-07-11','2017-09-10 07:44:38','1990-12-11 09:41:49'),
+       (5,5,'1984-06-16','1990-03-13','1975-11-21 01:16:18','1993-03-01 20:27:30'),
+       (6,6,'1991-06-03','1980-08-03','2005-08-02 22:54:54','1998-10-22 21:39:10'),
+       (7,7,'2019-08-17','2018-11-04','1986-08-28 14:26:49','2018-11-05 13:33:22'),
+       (8,8,'2014-04-16','1983-10-03','2017-08-14 18:15:00','1992-10-18 06:42:48'),
+       (9,9,'2019-07-10','1990-09-04','1992-12-28 04:47:40','1980-07-11 20:49:15'),
+       (10,10,'1994-03-18','1977-01-03','2005-03-28 06:38:48','2013-04-01 22:10:12');
 
-INSERT INTO rating
-VALUES (1,1,9),
-       (2,2,0),
-       (3,3,6),
-       (4,4,2),
-       (5,5,3),
-       (6,6,1),
-       (7,7,3),
-       (8,8,8),
-       (9,9,4),
-       (10,10,0),
-       (1,1,7),
-       (2,2,8),
-       (3,3,10),
-       (4,4,0),
-       (5,5,10),
-       (6,6,7),
-       (7,7,9),
-       (8,8,4),
-       (9,9,3),
-       (10,10,6);
-
-INSERT INTO reviews
-VALUES (1,1,1,'In nam iure ut velit atque. Fugit voluptatibus omnis illo dolorem asperiores.','1999-02-07 15:20:43','2015-03-06 00:20:45'),
-       (2,2,2,'Molestiae consequuntur fugiat cum eos est non deserunt. Deserunt sunt placeat eum maxime magni. Perferendis et hic voluptas nulla repellendus natus aspernatur. Est est nobis reiciendis eos.','1998-03-16 13:59:01','2021-06-14 15:35:57'),
-       (3,3,3,'Nisi facilis dolorem a fuga saepe facere aspernatur. Pariatur tempore occaecati ipsam voluptate modi sed.','1981-03-26 23:46:09','1995-07-21 10:38:21'),
-       (4,4,4,'Libero impedit unde labore qui nihil. Minima veniam id accusamus sint minima. Sunt aut et repellendus enim voluptas.','2005-07-30 07:33:43','2000-02-10 18:14:26'),
-       (5,5,5,'Et est temporibus fuga. Et rerum sit nihil iure.','1985-02-12 23:18:11','1996-06-19 00:46:12'),
-       (6,6,6,'Consectetur repellat et in vel. Quaerat fuga nemo deleniti est quidem sint deleniti officia. Maxime qui porro in voluptatibus. Dignissimos facilis ut repellendus dolor consequatur.','2004-06-29 15:49:01','1972-11-11 21:27:49'),
-       (7,7,7,'Dolorem temporibus quis vitae est illo beatae. Eius veritatis voluptas accusantium et eum dolorem voluptatem. Natus rem eligendi ut numquam. Animi ipsa nulla inventore delectus aut nobis aut omnis. Aspernatur et in pariatur ratione at rerum.','2009-07-13 08:27:43','1984-02-27 20:23:55'),
-       (8,8,8,'Voluptatum iusto adipisci adipisci possimus dolor. Asperiores vero ut nulla quia. Quas ex nemo optio. Neque consequatur modi quaerat.','1982-05-23 02:05:17','1984-04-01 08:25:36'),
-       (9,9,9,'Numquam fugit fuga quis molestiae voluptatem quae odio. Qui rem magni veniam minima cupiditate omnis eius quae.','2008-01-28 15:25:23','2007-10-15 00:39:46'),
-       (10,10,10,'Laboriosam illum neque delectus necessitatibus voluptatem. Beatae sequi mollitia iusto omnis quaerat aliquam vero. Quis tempore eligendi amet autem. Dolores placeat ipsam voluptatem iure magni.','2021-04-11 16:21:42','2012-01-23 02:22:44');
-
-
-
-
-
+INSERT INTO `rating`
+VALUES (1,1,'Ad qui ab laboriosam voluptatem.',2),
+       (2,2,'Nihil dolorem quasi quasi natus.',7),
+       (3,3,'Culpa consectetur dolore est quibusdam velit accusantium consequatur.',6),
+       (4,4,'Expedita molestias dicta velit est quisquam.',7),
+       (5,5,'Eum autem quia voluptates ea officia assumenda sit necessitatibus.',9),
+       (6,6,'Sed dolorum tenetur est et deserunt.',5),
+       (7,7,'Eum in quam ex dicta.',6),
+       (8,8,'Occaecati hic sint harum aut voluptas dolores vel voluptatem.',3),
+       (9,9,'Maiores quia numquam est iure molestiae pariatur consequatur sit.',9),
+       (10,10,'Minima vitae hic vel.',1);

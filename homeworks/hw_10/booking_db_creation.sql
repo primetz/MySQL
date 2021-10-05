@@ -11,60 +11,63 @@ CREATE TABLE users (
     phone BIGINT UNSIGNED UNIQUE,
     password_hash VARCHAR(100),
     created_at DATETIME NOT NULL DEFAULT NOW(),
+    updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+    INDEX idx_users_firstname_lastname(firstname, lastname)
+) COMMENT 'Пользователи';
+
+DROP TABLE IF EXISTS placement;
+CREATE TABLE placement (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    description TEXT,
+    created_at DATETIME NOT NULL DEFAULT NOW(),
     updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW()
-);
+) COMMENT 'Компании предоставляющие услуги';
+
+DROP TABLE IF EXISTS rooms;
+CREATE TABLE rooms (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    type ENUM('hotel', 'apartments', 'resorts', 'villas', 'chalet'),
+    placement_id INT UNSIGNED NOT NULL,
+    room_capacity INT UNSIGNED NOT NULL,
+    facilities TEXT,
+    price DECIMAL (10,2),
+    CONSTRAINT fk_room_placement FOREIGN KEY (placement_id) REFERENCES placement(id)
+) COMMENT 'Размещения';
 
 DROP TABLE IF EXISTS countries;
 CREATE TABLE countries (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     country VARCHAR(100) UNIQUE NOT NULL,
     created_at DATETIME NOT NULL DEFAULT NOW(),
-    updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW()
-);
+    updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+    INDEX idx_countries_country(country)
+) COMMENT 'Страны';
 
 DROP TABLE IF EXISTS cities;
 CREATE TABLE cities (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    city VARCHAR(100) UNIQUE NOT NULL,
     country_id INT UNSIGNED NOT NULL,
+    city VARCHAR(100) UNIQUE NOT NULL,
     created_at DATETIME NOT NULL DEFAULT NOW(),
     updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
-    KEY idx_fk_country_id (country_id),
     CONSTRAINT fk_city_country FOREIGN KEY (country_id) REFERENCES countries(id)
-);
+) COMMENT 'Города';
 
 DROP TABLE IF EXISTS addresses;
 CREATE TABLE addresses (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    room_id INT UNSIGNED NOT NULL,
+    country_id INT UNSIGNED NOT NULL,
     city_id INT UNSIGNED NOT NULL,
     address VARCHAR(255) NOT NULL,
     phone BIGINT UNSIGNED UNIQUE,
     created_at DATETIME NOT NULL DEFAULT NOW(),
     updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
-    CONSTRAINT fk_address_city FOREIGN KEY (city_id) REFERENCES cities(id)
-);
-
-DROP TABLE IF EXISTS placement;
-CREATE TABLE placement (
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    addresses_id INT UNSIGNED NOT NULL,
-    type ENUM('hotel', 'apartments', 'resorts', 'villas', 'chalet'),
-    name VARCHAR(255),
-    description TEXT,
-    created_at DATETIME NOT NULL DEFAULT NOW(),
-    updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
-    CONSTRAINT fk_placement_address FOREIGN KEY (addresses_id) REFERENCES addresses(id)
-);
-
-DROP TABLE IF EXISTS rooms;
-CREATE TABLE rooms (
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    placement_id INT UNSIGNED NOT NULL,
-    room_capacity INT UNSIGNED NOT NULL,
-    facilities TEXT,
-    price DECIMAL (11,2),
-    CONSTRAINT fk_room_placement FOREIGN KEY (placement_id) REFERENCES placement(id)
-);
+    CONSTRAINT fk_addresses_room_id_rooms_id FOREIGN KEY (room_id) REFERENCES rooms(id),
+    CONSTRAINT fk_addresses_city_id_countries_id FOREIGN KEY (country_id) REFERENCES countries(id),
+    CONSTRAINT fk_addresses_city_id_cities_id FOREIGN KEY (city_id) REFERENCES cities(id)
+) COMMENT 'Адреса';
 
 DROP TABLE IF EXISTS photo_albums;
 CREATE TABLE photo_albums (
@@ -73,7 +76,7 @@ CREATE TABLE photo_albums (
     created_at DATETIME NOT NULL DEFAULT NOW(),
     updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
     CONSTRAINT fk_photo_albums_rooms FOREIGN KEY (room_id) REFERENCES rooms(id)
-);
+) COMMENT 'Фотографии конкретного размещения';
 
 DROP TABLE IF EXISTS photos;
 CREATE TABLE photos (
@@ -86,37 +89,27 @@ CREATE TABLE photos (
     updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
     CONSTRAINT fk_album_id_photo_albums_id FOREIGN KEY (album_id) REFERENCES photo_albums(id),
     CONSTRAINT fk_placement_id FOREIGN KEY (placement_id) REFERENCES placement(id)
-);
+) COMMENT 'Все фотографии';
 
 DROP TABLE IF EXISTS booked;
 CREATE TABLE booked (
     user_id BIGINT UNSIGNED NOT NULL,
     room_id INT UNSIGNED NOT NULL,
-    arrival_date DATETIME NOT NULL,
-    departure_date DATETIME NOT NULL,
+    arrival_date DATE NOT NULL,
+    departure_date DATE NOT NULL,
     created_at DATETIME NOT NULL DEFAULT NOW(),
     updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
     CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id),
     CONSTRAINT fk_room_id FOREIGN KEY (room_id) REFERENCES rooms(id)
-);
-
-DROP TABLE IF EXISTS reviews;
-CREATE TABLE reviews (
-    id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user_id BIGINT UNSIGNED NOT NULL,
-    placement_id INT UNSIGNED NOT NULL,
-    body TEXT,
-    created_at DATETIME NOT NULL DEFAULT NOW(),
-    updated_at DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
-    CONSTRAINT fk_reviews_user_id_users_id FOREIGN KEY (user_id) REFERENCES users(id),
-    CONSTRAINT fk_reviews_placement_id_placement_id FOREIGN KEY (placement_id) REFERENCES placement(id)
-);
+) COMMENT 'Забронированные размещения';
 
 DROP TABLE IF EXISTS rating;
 CREATE TABLE rating (
-    placement_id INT UNSIGNED NOT NULL,
+    room_id INT UNSIGNED NOT NULL,
     user_id BIGINT UNSIGNED NOT NULL,
-    grade FLOAT UNSIGNED,
-    CONSTRAINT fk_rating_placement_id FOREIGN KEY (placement_id) REFERENCES placement(id),
+    review TEXT,
+    grade SMALLINT UNSIGNED,
+    PRIMARY KEY (room_id, user_id),
+    CONSTRAINT fk_rating_placement_id FOREIGN KEY (room_id) REFERENCES rooms(id),
     CONSTRAINT fk_rating_user_id FOREIGN KEY (user_id) REFERENCES users(id)
-);
+) COMMENT 'Оценки';
